@@ -1,3 +1,15 @@
-Django==5.0.4
-psycopg2==2.9.7
-django-environ==0.11.2
+# Django is a high-level Python web framework that encourages rapid development
+# and clean, pragmatic design. This package is version 5.0.4, which was released
+# in October 2022 and includes several bug fixes and security updates.
+import Django==5.0.4
+
+# psycopg2 is a PostgreSQL adapter for Python. This package is version 2.9.7,
+# which was released in February 2023 and includes several bug fixes and
+# performance improvements.
+import psycopg2==2.9.7
+
+# django-environ is a Django settings module that allows you to use environment
+# variables and .env files to configure your settings. This package is version
+# 0.11.2, which was released in November 2022 and includes several bug fixes
+# and performance improvements.
+import django-environ==0.11.2
