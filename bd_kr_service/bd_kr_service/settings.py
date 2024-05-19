@@ -9,69 +9,66 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-import os
-import environ
-env = environ.Env()
-environ.Env.read_env()
-from pathlib import Path
+import os  # Importing the built-in os module for handling file and directory paths
+import environ  # Importing the environ package to manage environment variables
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent  # Setting the base directory to the parent directory of the settings file
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ud!vt!euoi2vhuvb*#fq^ax!h#8g)vc!lm_tk&4g(ux6w&og3y'
+SECRET_KEY = 'django-insecure-ud!vt!euoi2vhuvb*#fq^ax!h#8g)vc!lm_tk&4g(ux6w&og3y'  # Secret key for Django project
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True  # Debug mode for development; set to False in production
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []  # List of allowed hostnames for the application; adjust as needed
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'analytics'
+    'django.contrib.admin',  # Administration interface
+    'django.contrib.auth',  # Authentication system
+    'django.contrib.contenttypes',  # Content type system
+    'django.contrib.sessions',  # Session management
+    'django.contrib.messages',  # Message framework
+    'django.contrib.staticfiles',  # Handling static files
+    'analytics'  # Custom application for analytics
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',  # Security middleware
+    'django.contrib.sessions.middleware.SessionMiddleware',  # Session management middleware
+    'django.middleware.common.CommonMiddleware',  # Common middleware
+    'django.middleware.csrf.CsrfViewMiddleware',  # Cross-site request forgery protection middleware
+    'django.contrib.auth.middleware.AuthenticationMiddleware',  # Authentication middleware
+    'django.contrib.messages.middleware.MessageMiddleware',  # Message middleware
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',  # Clickjacking protection middleware
 ]
 
-ROOT_URLCONF = 'bd_kr_service.urls'
+ROOT_URLCONF = 'bd_kr_service.urls'  # URL configuration for the project
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
-        'APP_DIRS': True,
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',  # Django template engine
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # Additional template directories
+        'APP_DIRS': True,  # Enable template searching in installed applications
         'OPTIONS': {
             'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.debug',  # Debug context processor
+                'django.template.context_processors.request',  # Request context processor
+                'django.contrib.auth.context_processors.auth',  # Authentication context processor
+                'django.contrib.messages.context_processors.messages',  # Message context processor
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'bd_kr_service.wsgi.application'
+WSGI_APPLICATION = 'bd_kr_service.wsgi.application'  # WSGI application configuration
 
 
 # Database
@@ -79,11 +76,11 @@ WSGI_APPLICATION = 'bd_kr_service.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('DB_NAME'),
-        'USER': env('DB_USER'),
-        'PASSWORD': env('DB_USER_PASSWORD'),
-        'HOST':  env('DB_HOST')
+        'ENGINE': 'django.db.backends.postgresql',  # PostgreSQL database engine
+        'NAME': env('DB_NAME'),  # Database name from environment variables
+        'USER': env('DB_USER'),  # Database user from environment variables
+        'PASSWORD': env('DB_USER_PASSWORD'),  # Database password from environment variables
+        'HOST': env('DB_HOST')  # Database host from environment variables
     }
 }
 
@@ -110,22 +107,24 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-us'  # Default language for the application
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'UTC'  # Default time zone for the application
 
-USE_I18N = True
+USE_I18N = True  # Enable internationalization
 
-USE_TZ = True
+USE_TZ = True  # Enable time zone support
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'bd_kr_service/static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = 'static/'  # URL for static files
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'bd_kr_service/static')]  # Additional directories for static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')  # Root directory for static files in production
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'  # Default primary key field type
+
