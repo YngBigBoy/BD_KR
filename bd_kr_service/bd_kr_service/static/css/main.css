@@ -1,151 +1,136 @@
+/* Defines a placeholder image */
 .bd-placeholder-img {
-font-size: 1.125rem;
-text-anchor: middle;
--webkit-user-select: none;
--moz-user-select: none;
-user-select: none;
+  /* Font size of the image */
+  font-size: 1.125rem;
+  /* Text alignment of the image */
+  text-anchor: middle;
+  /* Prevents the image from being selected */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
+/* Defines styles for screens with a minimum width of 768px */
 @media (min-width: 768px) {
-.bd-placeholder-img-lg {
-font-size: 3.5rem;
-}
-.bd-placeholder-img {
-font-size: 1.125rem;
-text-anchor: middle;
--webkit-user-select: none;
--moz-user-select: none;
-user-select: none;
-}
-
-@media (min-width: 768px) {
-.bd-placeholder-img-lg {
-font-size: 3.5rem;
-}
+  /* Defines a larger placeholder image for larger screens */
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+  /* Applies the same styles as .bd-placeholder-img */
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
 }
 
+/* Defines a divider */
 .b-example-divider {
-width: 100%;
-height: 3rem;
-background-color: rgba(0, 0, 0, .1);
-border: solid rgba(0, 0, 0, .15);
-border-width: 1px 0;
-box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  /* Width of the divider */
+  width: 100%;
+  /* Height of the divider */
+  height: 3rem;
+  /* Background color of the divider */
+  background-color: rgba(0, 0, 0, .1);
+  /* Border style of the divider */
+  border: solid rgba(0, 0, 0, .15);
+  /* Border width of the divider */
+  border-width: 1px 0;
+  /* Box shadow of the divider */
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
 }
 
+/* Defines a vertical resizer */
 .b-example-vr {
-flex-shrink: 0;
-width: 1.5rem;
-height: 100vh;
+  /* Prevents the resizer from shrinking */
+  flex-shrink: 0;
+  /* Width of the resizer */
+  width: 1.5rem;
+  /* Height of the resizer */
+  height: 100vh;
 }
 
+/* Defines a bi icon */
 .bi {
-vertical-align: -.125em;
-fill: currentColor;
+  /* Vertical alignment of the icon */
+  vertical-align: -.125em;
+  /* Fill color of the icon */
+  fill: currentColor;
 }
 
+/* Defines a nav scroller */
 .nav-scroller {
-position: relative;
-z-index: 2;
-height: 2.75rem;
-overflow-y: hidden;
+  /* Position of the scroller */
+  position: relative;
+  /* Z-index of the scroller */
+  z-index: 2;
+  /* Height of the scroller */
+  height: 2.75rem;
+  /* Hides the vertical scrollbar */
+  overflow-y: hidden;
 }
 
+/* Defines a nav scroller with a nav */
 .nav-scroller .nav {
-display: flex;
-flex-wrap: nowrap;
-padding-bottom: 1rem;
-margin-top: -1px;
-overflow-x: auto;
-text-align: center;
-white-space: nowrap;
--webkit-overflow-scrolling: touch;
+  /* Display style of the nav */
+  display: flex;
+  /* Wraps the nav items to the next line */
+  flex-wrap: nowrap;
+  /* Padding at the bottom of the nav */
+  padding-bottom: 1rem;
+  /* Offsets the top margin of the nav */
+  margin-top: -1px;
+  /* Enables horizontal scrolling */
+  overflow-x: auto;
+  /* Centers the text in the nav items */
+  text-align: center;
+  /* Prevents text wrapping */
+  white-space: nowrap;
+  /* Enables smooth scrolling on mobile devices */
+  -webkit-overflow-scrolling: touch;
 }
 
+/* Defines a primary button with a violet background */
 .btn-bd-primary {
---bd-violet-bg: #712cf9;
---bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+  /* Violet background color */
+  --bd-violet-bg: #712cf9;
+  /* Violet RGB values */
+  --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
 
---bs-btn-font-weight: 600;
---bs-btn-color: var(--bs-white);
---bs-btn-bg: var(--bd-violet-bg);
---bs-btn-border-color: var(--bd-violet-bg);
---bs-btn-hover-color: var(--bs-white);
---bs-btn-hover-bg: #6528e0;
---bs-btn-hover-border-color: #6528e0;
---bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
---bs-btn-active-color: var(--bs-btn-hover-color);
---bs-btn-active-bg: #5a23c8;
---bs-btn-active-border-color: #5a23c8;
+  /* Font weight of the button */
+  --bs-btn-font-weight: 600;
+  /* Text color of the button */
+  --bs-btn-color: var(--bs-white);
+  /* Background color of the button */
+  --bs-btn-bg: var(--bd-violet-bg);
+  /* Border color of the button */
+  --bs-btn-border-color: var(--bd-violet-bg);
+  /* Hover text color of the button */
+  --bs-btn-hover-color: var(--bs-white);
+  /* Hover background color of the button */
+  --bs-btn-hover-bg: #6528e0;
+  /* Hover border color of the button */
+  --bs-btn-hover-border-color: #6528e0;
+  /* Focus shadow RGB values of the button */
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  /* Active text color of the button */
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  /* Active background color of the button */
+  --bs-btn-active-bg: #5a23c8;
+  /* Active border color of the button */
+  --bs-btn-active-border-color: #5a23c8;
 }
 
+/* Defines a mode toggle with a high z-index */
 .bd-mode-toggle {
-z-index: 1500;
+  /* Z-index of the toggle */
+  z-index: 1500;
 }
 
+/* Defines a dropdown menu with an active bi icon */
 .bd-mode-toggle .dropdown-menu .active .bi {
-display: block !important;
-}     }
-
-.b-example-divider {
-width: 100%;
-height: 3rem;
-background-color: rgba(0, 0, 0, .1);
-border: solid rgba(0, 0, 0, .15);
-border-width: 1px 0;
-box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-}
-
-.b-example-vr {
-flex-shrink: 0;
-width: 1.5rem;
-height: 100vh;
-}
-
-.bi {
-vertical-align: -.125em;
-fill: currentColor;
-}
-
-.nav-scroller {
-position: relative;
-z-index: 2;
-height: 2.75rem;
-overflow-y: hidden;
-}
-
-.nav-scroller .nav {
-display: flex;
-flex-wrap: nowrap;
-padding-bottom: 1rem;
-margin-top: -1px;
-overflow-x: auto;
-text-align: center;
-white-space: nowrap;
--webkit-overflow-scrolling: touch;
-}
-
-.btn-bd-primary {
---bd-violet-bg: #712cf9;
---bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
---bs-btn-font-weight: 600;
---bs-btn-color: var(--bs-white);
---bs-btn-bg: var(--bd-violet-bg);
---bs-btn-border-color: var(--bd-violet-bg);
---bs-btn-hover-color: var(--bs-white);
---bs-btn-hover-bg: #6528e0;
---bs-btn-hover-border-color: #6528e0;
---bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
---bs-btn-active-color: var(--bs-btn-hover-color);
---bs-btn-active-bg: #5a23c8;
---bs-btn-active-border-color: #5a23c8;
-}
-
-.bd-mode-toggle {
-z-index: 1500;
-}
-
-.bd-mode-toggle .dropdown-menu .active .bi {
-display: block !important;
+  /* Displays the bi icon */
+  display: block !important;
 }
