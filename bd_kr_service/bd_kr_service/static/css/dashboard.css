@@ -1,42 +1,70 @@
+/* Bi Icon */
 .bi {
+  /*
+  This class sets the display property to inline-block,
+  with a width and height of 1rem each. This is used for
+  icons in the navigation bar and sidebar.
+  */
   display: inline-block;
   width: 1rem;
   height: 1rem;
 }
 
-/*
- * Sidebar
- */
-
+/* Sidebar */
 @media (min-width: 768px) {
+  /*
+  This media query applies styles when the viewport is
+  at least 768px wide. It sets the position property
+  to -webkit-sticky and sticky, and the top property to 48px
+  for the .offcanvas-lg class within the .sidebar class.
+  This keeps the sidebar in place when scrolling.
+  */
   .sidebar .offcanvas-lg {
     position: -webkit-sticky;
     position: sticky;
     top: 48px;
   }
+  /*
+  This rule displays the .navbar-search class within the .sidebar
+  class when the viewport is at least 768px wide.
+  */
   .navbar-search {
     display: block;
   }
 }
 
 .sidebar .nav-link {
+  /*
+  This rule sets the font-size and font-weight properties for
+  the .nav-link class within the .sidebar class.
+  */
   font-size: .875rem;
   font-weight: 500;
 }
 
 .sidebar .nav-link.active {
+  /*
+  This rule sets the color property for the .nav-link class
+  within the .sidebar class when it has the .active class.
+  */
   color: #2470dc;
 }
 
 .sidebar-heading {
+  /*
+  This rule sets the font-size property for the .sidebar-heading
+  class.
+  */
   font-size: .75rem;
 }
 
-/*
- * Navbar
- */
-
+/* Navbar */
 .navbar-brand {
+  /*
+  This rule sets the padding-top and padding-bottom properties
+  for the .navbar-brand class, as well as its background-color
+  and box-shadow properties.
+  */
   padding-top: .75rem;
   padding-bottom: .75rem;
   background-color: rgba(0, 0, 0, .25);
@@ -44,5 +72,9 @@
 }
 
 .navbar .form-control {
+  /*
+  This rule sets the padding property for the .form-control
+  class within the .navbar class.
+  */
   padding: .75rem 1rem;
 }
