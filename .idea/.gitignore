@@ -1,3 +1,10 @@
 # Default ignored files
+# The following files will be ignored by default in this directory and its subdirectories
+# unless explicitly included in operations affecting all files.
 /shelf/
+# This file is a shelf directory used by version control systems and should be excluded
+# from most operations to avoid conflicts or unintended modifications.
 /workspace.xml
+# This file contains workspace settings and preferences for the development environment.
+# It should be excluded from most operations to ensure that each user's settings and
+# preferences are not overwritten or modified accidentally.
